@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+:root{
+    --br: url('./flags/brazil.png');
+    --us: url('./flags/america.jpg');
+    --es: url('./flags/mexico.jpg');
+    --de: url('./flags/germany.jpg');
+    --gb: url('./flags/uk.jpg');
+    --it: url('./flags/italy.jpg');
+    --fr: url('./flags/france.jpg');
+    --nl: url('./flags/nl.jpg');
+    --ru: url('./flags/rs.jpg');
+
+
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    background: var(--us);
+    transition: background .5s ease-out;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+}
+
+body * {
+    z-index: 1;
+}
+
+select, select::content {
+    cursor: pointer;
+    outline: 0;
+    padding: 8px;
+    background: white;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.btn-start{
+    cursor: pointer;
+    transition: all .07s ease-in-out;
+    padding: 20px 0;
+    height: 400px;
+}
+
+.btn-start:active{
+    transform: scale(.7);
+}
+
+.voices {
+    margin: 30px;
+}
+
+.msg {
+    height: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    background-color: rgba(255, 255, 255, .4);
+    border: 5px solid rgba(0,0,0,.5);
+    border-radius: 10px;
+
+
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 15px;
+
+}
+
+.btn{
+    font-size: 30px;
+    width: 100px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: white;
+    padding: 4px;
+    cursor: pointer;
+    margin: 0 20px 10px 20px;
+
+}
+
+.btn:active {
+    transition-duration: .07s;
+    transform: scale(.8) ;
+}
+
+.caution {
+    color: rgb(190, 3, 3);
+    font-size: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+    opacity: 0;
+}
+}
+
+.visibility {
+    visibility: hidden;
+}
+
+.btn, select {
+    border: black solid 3px;
+}
+
+
+/* 
+ */
+
+ .bg-modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;  
+  }
+  
+  .modal-content {
+    width: 60%;
+    height: 60%;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center; 
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 10px !important;
+  }
+
+
+  .close{
+      font-size: 30px;
+      text-align: right;
+      padding: 10px !important;
+      cursor: pointer;
+  }
+
+  .hidden {
+      display: none;
+  }
+
+  #msg-transcript {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    padding-bottom: 10px;
+    height: 95%;
+    width: 95%;  
+    list-style-type: none;
+    font-family: 'Times New Roman', Times, serif;
+
+  }
+
+  .translation {
+    color: red;
+    font-size: 20px;
+  }
+
+  .original {
+    color: gray;
+    font-size: 15px;
+  }
+
+  .translation, .original {
+    margin: 0 auto 0 auto !important;
+  }

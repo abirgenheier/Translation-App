@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Voice Translate</title>
+
+        <link
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+            integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+            crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="bg-modal hidden">
+            <div class="modal-content">
+                <div class="close" id="close">X</div>
+                <ul class="msg-transcript" id="msg-transcript"></ul>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div>
+                <select class="voices" id="player-1-voices"></select>
+                <i id='caution1' class="fas fa-exclamation caution visibility"></i>
+            </div>
+            <img src="mic.png" alt="speak" class="btn-start">
+
+            <div>
+                <select class="voices" id="player-2-voices"></select>
+                <i id='caution2' class="fas fa-exclamation caution visibility"></i>
+            </div>
+            <i class="fas fa-exchange-alt icon-swap btn"></i>
+            <i class="fas fa-file-alt icon-transcript btn"></i>
+            <div>
+                <div id="msg" class="msg"></div>
+            </div>
+        </div>
+        <script src="https://kit.fontawesome.com/a9f3433135.js"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
+            integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="crossorigin="anonymous"></script>
+        <script src="logic.js"></script>
+    </body>
+</html>
